@@ -1,0 +1,10 @@
+services:
+
+  withoutbg:
+    image: withoutbg/app:latest
+    container_name: WithoutBG
+    security_opt:
+      - no-new-privileges:true
+    ports:
+      - "8200:80"
+    restart: unless-stopped
